@@ -1,0 +1,59 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body {
+  background-image: url('./assets/dark-wood-wall.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif !important;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  
+  // Location Page
+
+  #location {
+    background-image: url('./assets/location-image.jpg');
+    background-size: cover;
+    background-position-y: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 10px 20px 20px 10px #121212;
+
+    @media screen and (max-width: 600px) {
+      background: none;
+      box-shadow: none;
+
+      h5 {
+        color: #fff !important;
+      }
+    }
+
+    #address {
+      // background-color: #ffdf2b;
+      background-blend-mode: overlay;
+      border-radius: 20px;
+
+      p.text-dark {
+        @media screen and (max-width: 600px) {
+          color: #fff !important;
+        }
+      }
+
+    }
+  }
+}

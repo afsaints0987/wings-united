@@ -1,0 +1,121 @@
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: text;
+    line-height: 0.75rem;
+    align-items: center;
+    min-height: 70vh;
+    text-transform: uppercase;
+
+    h1 {
+        font-size: 9.5rem;
+        color: #FFDF2B;
+        text-shadow: 0 0 5px #FFDF2B;
+        animation: glow-h1 1s ease-in-out infinite alternate;
+
+
+        #star {
+            font-size: 32px;
+            position: relative;
+            opacity: 0.75;
+
+            svg {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: -40px;
+                animation: rotate 2s infinite linear;
+                border-radius: 50%;
+                color: #3da0fc;
+
+                @media screen and (max-width: 600px) {
+                    width: 15px;
+                    left: -15px;
+                    height: 10px;
+                }
+            }
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 3rem;
+        }
+    }
+
+    h2 {
+        font-size: 7rem;
+        color: #FF5757;
+        text-shadow: 0 0 5px #FF5757;
+        animation: glow-h2 1.25s ease-in-out infinite alternate;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: #FFDF2B;
+
+        &:hover {
+            cursor: pointer;
+            color: #FFDF2B;
+            text-shadow: 0 0 10px #ffe23d;
+            transition: all 0.2s ease-in-out;   
+        }
+    }
+
+    @keyframes glow-h1 {
+        from {
+            text-shadow: 0 0 5px #FFDF2B;
+          }
+          to {
+            text-shadow: 0 0 10px #FFDF2B, 0 0 20px #ffe23d;
+          }
+    }
+
+    @keyframes glow-h2 {
+        from {
+            text-shadow: 0 0 5px #FF5757;
+        }
+        to {
+            text-shadow: 0 0 10px #FF5757, 0 0 20px #ff7e7e;
+        }
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2rem;
+
+        .icons {
+            font-size: 30px;
+
+            svg {
+                color: #fff;
+
+                &:hover {
+                    color: #FF5757;
+                    box-shadow: 0 0 10px #ff7e7e;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
